@@ -14,7 +14,7 @@ oldObject.sayNode(); //Node
 oldObject.sayJS(); //JS
 console.log(oldObject.ES6); //Fantastic
 
-//---------------------------------------------------
+// change
 
 const newObject = {
   sayJS() {

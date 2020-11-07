@@ -10,7 +10,7 @@ var relationsship1 = {
 };
 relationsship1.logFriends();
 
-//------------------------------------------------------
+// change
 
 const relationsship2 = {
   name: "zero",

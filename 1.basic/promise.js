@@ -4,9 +4,9 @@
 const condition = true;
 const promise = new Promise((resolve, reject) => {
   if (condition) {
-    resolve("성공");
+    resolve("성공"); //then 실행
   } else {
-    reject("실패");
+    reject("실패"); //catch 실행
   }
 });
 
@@ -18,7 +18,7 @@ promise
     console.error(error);
   });
 
-//---------------------------------------------------
+// or
 
 promise
   .then((message) => {
@@ -39,41 +39,13 @@ promise
     console.error(error);
   });
 
-//---------------------------------------------------
-
-function findAndSaveUser(Users) {
-  Users.findOne({}, (err, user) => {
-    if (err) {
-      return console.error(err);
-    }
-    user.name = "zero";
-    user.save((err) => {
-      if (err) {
-        return console.error(err);
-      }
-    });
-  });
-}
-
-// change
-
-function findAndSaveUser(Users) {
-  Users.findOne({})
-    .then((user) => {
-      return user.save();
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-}
-
-//
+// callback 중첩을 Promise.all로 변환
 
 const promise1 = Promise.resolve("성공1");
 const promise2 = Promise.resolve("성공2");
 Promise.all([promise1, promise2])
   .then((result) => {
-    console.log(result);
+    console.log(result); // ['성공1', '성공2']
   })
   .catch((error) => {
     console.error(err);
