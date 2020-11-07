@@ -10,9 +10,9 @@ var oldObject = {
 };
 oldObject[es + 6] = "Fantastic";
 
-oldObject.sayNode();
-oldObject.sayJS();
-console.log(oldObject.ES6);
+oldObject.sayNode(); //Node
+oldObject.sayJS(); //JS
+console.log(oldObject.ES6); //Fantastic
 
 //---------------------------------------------------
 
@@ -23,6 +23,6 @@ const newObject = {
   sayNode,
   [es + 6]: "Fantastic",
 };
-newObject.sayNode();
-newObject.sayJS();
-console.log(oldObject.ES6);
+newObject.sayNode(); //Node
+newObject.sayJS(); //JS
+console.log(oldObject.ES6); //Fantastic
