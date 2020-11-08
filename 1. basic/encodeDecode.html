@@ -1,0 +1,20 @@
+<!--
+URL에 한글이 들어가는 경우 서버가 한글을 이해하지 못하는 경우 발생
+: encodeURIComponent 메서드 사용
+-->
+
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === xhr.DONE) {
+            if(xhr.status === 200 || xhr.status === 201) {
+                console.log(xhr.responseText);
+            } else {
+                console.error(xhr.responseText);
+            }
+        }
+    };
+    xhr.open('GET', 'http://localhost:8080/' + encodeURIComponent('노드'));
+    console.log(decodeURIComponent('%EB%85%B8%EB%93%9C'));
+    xhr.send();
+</script>

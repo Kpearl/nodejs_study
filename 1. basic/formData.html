@@ -1,0 +1,25 @@
+<script>
+    var formData = new FormData();
+    formData.append('name', 'test');
+    formData.append('year', 2020);
+    formData.append('item', 'item1');
+    formData.append('item', 'item2');
+    formData.has('item');
+    formData.has('test');
+    formData.getAll('item');
+    formData.append('item', ['item3', 'item4']);
+    formData.get('itme');
+    formData.set('item', 'test');
+    formData.get('item');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:8080');
+    xhr.send(formData);
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === xhr.DONE) {
+            if(xhr.status === 200 || xhr.status === 201) {
+                console.log(xhr.responseText);
+            }
+        }
+    };
+</script>
