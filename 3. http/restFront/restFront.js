@@ -25,14 +25,15 @@ function getUser() {
                             console.error(xhr.responseText);
                         }
                     };
-                    xhr.open('PUT', '/user/' + key);
+                    xhr.open('PUT', '/users/' + key);
                     xhr.setRequestHeader('Content-Type', 'application/json');
                     xhr.send(JSON.stringify({name : name}));
                 });
                 var remove = document.createElement('button');
                 remove.textContent = '삭제';
                 remove.addEventListener('click', function() {
-                    var xhr = new function() {
+                    var xhr =  new XMLHttpRequest();
+                    xhr.onload = function() {
                         if(xhr.status === 200) {
                             console.log(xhr.responseText);
                             getUser();

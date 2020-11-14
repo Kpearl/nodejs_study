@@ -39,7 +39,7 @@ http.createServer((req, res) => {
                 console.log('POST 본문(BODY):', body);
                 const { name } = JSON.parse(body);
                 const id = +new Date();
-                user[id] = name;
+                users[id] = name;
                 res.writeHead(201);
                 res.end('등록 성공');
             });
