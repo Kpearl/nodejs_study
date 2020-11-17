@@ -10,13 +10,13 @@ npm i -g express-generator
 sudo npm i -g express-generator
 ~~~
 
-
+<br>
 
 2. learn-express 라는 프로젝트 생성
 ~~~
 express learn-express --view=pug
 ~~~
 
+<br>
 
-  
 3. 
