@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var sequelize = require('./models').sequelize;
+var sequelize = require('./models').sequelize; // mysql 연동
 
 var app = express();
 sequelize.sync();
