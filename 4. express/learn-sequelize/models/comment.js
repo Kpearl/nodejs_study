@@ -1,6 +1,3 @@
-const { DataTypes } = require("sequelize/types");
-const { sequelize } = require(".");
-
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('comment', {
         comment: {
@@ -14,5 +11,5 @@ module.exports = (sequelize, DataTypes) => {
         },
     }, {
         timestamps: false,
-    })
-}
+    });
+};
