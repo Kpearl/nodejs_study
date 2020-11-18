@@ -18,3 +18,19 @@ sequelize init
 ~~~
 에러 발생시 sudo
 
+
+## Table
+|user|
+|---|
+|name|
+|age|
+|married|
+|comment|
+|create_at|
+
+<br>
+
+|comment|
+|---|
+|comment|
+|create_at|
