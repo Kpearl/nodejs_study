@@ -20,17 +20,17 @@ sequelize init
 
 
 ## Table
-|user|
-|---|
-|name|
-|age|
-|married|
-|comment|
-|create_at|
+|user|model|
+|---|---|
+|name|string|
+|age|integer|
+|married|boolean|
+|comment|text|
+|create_at|date|
 
 <br>
 
-|comment|
-|---|
-|comment|
-|create_at|
+|comment|model|
+|---|---|
+|comment|string|
+|create_at|date|
