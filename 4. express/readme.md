@@ -36,7 +36,7 @@ learn-express
 +-- node_modules  
 +-- public  // 외부 접근 가능 파일  
 +-- routes  // 서버 로직 작성(Control 역할)  
-+-- model  // 기본 제공X, 데이터 관련(Model 역할)  
++-- model/schemas  // 기본 제공X, 데이터 관련(Model 역할)  
 +-- views  // 템플릿 파일(View 역할)  
 +-- app.js  // 핵심 서버 역할  
 +-- package.json  
