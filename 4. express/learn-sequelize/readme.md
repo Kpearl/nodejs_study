@@ -34,3 +34,7 @@ sequelize init
 |---|---|
 |comment|string|
 |create_at|date|
+
+## 기능
+회원 : 등록/조회  
+댓글 : 등록/조회/수정/삭제
