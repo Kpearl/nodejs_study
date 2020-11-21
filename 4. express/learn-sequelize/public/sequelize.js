@@ -45,7 +45,7 @@ function getComment(id) {
     xhr.onload = function () {
         if (xhr.status === 200) {
             var comments = JSON.parse(xhr.responseText);
-            var tbody = document.querySelector('#commnet-list tbody');
+            var tbody = document.querySelector('#comment-list tbody');
             tbody.innerHTML = '';
             comments.map(function (comment) {
                 var row = document.createElement('tr');
@@ -54,7 +54,10 @@ function getComment(id) {
                 row.appendChild(td);
                 td = document.createElement('td');
                 td.textContent = comment.user.name;
-                row.appendChild = comment.comment;
+                row.appendChild(td);
+                td = document.createElement('td');
+                td.textContent = comment.comment;
+                row.appendChild(td);
                 var edit = document.createElement('button');
                 edit.textContent = '수정';
                 edit.addEventListener('click', function () {

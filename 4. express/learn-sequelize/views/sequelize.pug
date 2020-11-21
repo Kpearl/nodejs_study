@@ -41,24 +41,24 @@ html
                                 td= user.name
                                 td= user.age
                                 td= user.married ? '기혼' : '미혼'
-                    br
-                    div
-                        form#comment-form
-                            fieldset
-                                legend 댓글 등록
-                                div
-                                    input#userid(type="text" placeholder="사용자 아이디")
-                                div
-                                    input#comment(type="text" placeholder="댓글")
-                                button(type="submit") 등록
-                    br
-                    table#comment-list
-                        thead
-                            tr
-                                th 아이디
-                                th 작성자
-                                th 댓글
-                                th 수정
-                                th 삭제
-                        tbody
-                    script(src='/sequelize.js')
+            br
+            div
+                form#comment-form
+                    fieldset
+                        legend 댓글 등록
+                        div
+                            input#userid(type="text" placeholder="사용자 아이디")
+                        div
+                            input#comment(type="text" placeholder="댓글")
+                        button(type="submit") 등록
+                br
+                table#comment-list
+                    thead
+                        tr
+                            th 아이디
+                            th 작성자
+                            th 댓글
+                            th 수정
+                            th 삭제
+                    tbody
+    script(src='/sequelize.js')
