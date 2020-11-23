@@ -9,6 +9,8 @@ express learn-mongoose --view=pug
 cd learn-mongoose
 
 npm i
+
+npm install mongodb
 ~~~
 
 <br>
