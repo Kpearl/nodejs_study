@@ -15,7 +15,20 @@ npm install mongodb
 
 <br>
 
-## Table
+## Schema
+|Users|DataType|
+|----|----|
+|name|String|
+|age|Number|
+|married|Boolean|
+|comment|String|
+|createAt|Date|
+
+|Comments|DataType|
+|----|----|
+|commenter|ObjectId|
+|comment|String|
+|createAt|Date|
 
 <br>
 
