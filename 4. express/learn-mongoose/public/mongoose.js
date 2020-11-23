@@ -1,6 +1,6 @@
 document.querySelectorAll('#user-list tr').forEach(function (el) {
     el.addEventListener('click', function () {
-        var id = el.querySelector('td').textContentl
+        var id = el.querySelector('td').textContent;
         getComment(id);
     });
 });
@@ -22,7 +22,10 @@ function getUser() {
                 td.textContent = user._id;
                 row.appendChild(td);
                 td = document.createElement('td');
-                td.textContent - user.name;
+                td.textContent = user.name;
+                row.appendChild(td);
+                td = document.createElement('td');
+                td.textContent = user.age;
                 row.appendChild(td);
                 td = document.createElement('td');
                 td.textContent = user.married ? '기혼' : '미혼';
@@ -53,7 +56,7 @@ function getComment(id) {
                 td.textContent = comment.commenter.name;
                 row.appendChild(td);
                 td = document.createElement('td');
-                td.textContent = comment.commenter.comment;
+                td.textContent = comment.comment;
                 row.appendChild(td);
                 var edit = document.createElement('button');
                 edit.textContent = '수정';
@@ -76,7 +79,7 @@ function getComment(id) {
                     xhr.send(JSON.stringify({ comment: newComment }));
                 });
                 var remove = document.createElement('button');
-                remove.testContent = '삭제';
+                remove.textContent = '삭제';
                 remove.addEventListener('click', function () {
                     var xhr = new XMLHttpRequest();
                     xhr.onload = function () {
@@ -110,7 +113,7 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var name = e.target.username.value;
     var age = e.target.age.value;
-    var married = e.target.married.check;
+    var married = e.target.married.checked;
     if (!name) {
         return alert('이름 입력');
     }
@@ -131,7 +134,7 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
     xhr.send(JSON.stringify({ name: name, age: age, married: married }));
     e.target.username.value = '';
     e.target.age.value = '';
-    e.target.married.checkd = false;
+    e.target.married.checked = false;
 });
 
 document.getElementById('comment-form').addEventListener('submit', function (e) {
