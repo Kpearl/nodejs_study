@@ -1,0 +1,14 @@
+extends layout
+
+    block content
+     .timeline
+      .followings.half
+       h2 팔로일 목록
+       if user.Followings
+        for following in user.Followings
+         div= following.nick
+      .followers.half
+       h2 팔로워 목록
+       if user.Followers
+        for follower in user.Follwers
+            div=follower.nick
