@@ -19,5 +19,8 @@
     "nodemon": "^2.0.6",
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "pug": "^3.0.0"
   }
 }
