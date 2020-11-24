@@ -20,6 +20,8 @@ npm install morgan
 npm install express-session
 
 npm install connect-flash
+
+npm i -D pug
 ~~~
 
 <br>
