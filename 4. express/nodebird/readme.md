@@ -10,6 +10,16 @@ sudo npm i sequelize-cli
 npm i sequelize mysql2
 
 sequelize init
+
+npm install nodemon
+
+npm install cookie-parser
+
+npm install morgan
+
+npm install express-session
+
+npm install connect-flash
 ~~~
 
 <br>
