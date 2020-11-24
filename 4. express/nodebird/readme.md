@@ -27,3 +27,7 @@ nodebird
 +-- views  
 +-- app.js  
 +-- package.json  
+
+
+### module
+dotenv // 환경 변수를 .env 파일에 저장하여 process.env로 로드하는 의존성 모듈
