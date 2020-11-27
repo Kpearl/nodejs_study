@@ -1,8 +1,5 @@
-const { DataTypes } = require('sequelize/types');
-const { sequelize } = require('.');
-
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  return sequelize.define(
     'post',
     {
       content: {

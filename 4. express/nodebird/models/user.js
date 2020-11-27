@@ -1,7 +1,5 @@
-const { sequelize } = require('.');
-
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  return sequelize.define(
     'user',
     {
       email: {
