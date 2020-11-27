@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
+const passport = require('passport');
 require('dotenv').config();
 
 const pageRouter = require('./routes/page');
@@ -33,6 +34,8 @@ app.use(
   })
 );
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', pageRouter);
 
