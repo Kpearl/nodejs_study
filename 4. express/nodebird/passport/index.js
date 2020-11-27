@@ -8,9 +8,8 @@ module.exports = (passport) => {
         done(null, user.id);
     });
     // 요청시 실행, session 미들웨어가 호출
-    passport.deserializeUser((id, name) => {
-        User.find({where:id}).then
-        (user => done(null, user)).catch(err => done(err));
+    passport.deserializeUser((id, done) => {
+        User.findOne({where:{id}}).then(user => done(null, user)).catch(err => done(err));
     });
 
     local(passport);
