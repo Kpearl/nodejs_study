@@ -24,6 +24,8 @@ npm install connect-flash
 npm i -D pug
 
 sequlize db:create // 데이터베이스 생성
+
+Database nodebird create // nodebird DB 
 ~~~
 
 <br>
