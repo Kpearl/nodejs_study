@@ -24,6 +24,8 @@ npm install connect-flash
 npm i -D pug
 
 sequlize db:create // 데이터베이스 생성
+
+npm i multer // 파일 업로드 
 ~~~
 
 <br>
