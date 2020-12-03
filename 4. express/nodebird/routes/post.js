@@ -20,15 +20,16 @@ const upload = multer({
             cb(null, 'uploads/');
         },
         filename(req, file, cb) {
-            const ext = path.extname(file.originalname);
-            cb(null, path.basename(file.originalname, ext) + new Date().valueOf + ext);
+            const ext = path.extname(file.originalname); // 기존 확장자
+            cb(null, path.basename(file.originalname, ext) + new Date().valueOf + ext); // 파일 이름 중복 방지를 위해 날짜 추가
         },
     }),
     limits: {fileSize: 5*1024*1024},
 });
 router.post('./img', isLoggedIn, upload.single('img'), (req, res) => {
+    // single: 이미지 하나, array: 이미지 하나/속성 여러개, fields : 이미지 여러개/속성 하나 , none : 데이터만
     console.log(req.file);
-    res.json({url:'/img/${req.file.filename'});
+    res.json({url:`/img/${req.file.filename}`});
 });
 
 const upload2 = multer();
@@ -51,28 +52,6 @@ router.post('/', isLoggedIn, upload2.none(), async(req, res, next) => {
     console.error(error);
     next(error);
 }
-});
-
-router.get('/hashtag', async(req, res, next) => {
-    const query = req.query.hashtags;
-    if(!query) {
-        return res.redirect('/');
-    }
-    try {
-        const hashtag = await Hashtag.find({where: { title: query}});
-        let posts = [];
-        if(hashtag) {
-            posts = await hashtag.getPosts({include:[{model:User}]});
-        }
-        return res.render('main', {
-            title: `${query} | NodeBird`,
-            user: req.user,
-            twits: posts, 
-        });
-    } catch(error) {
-        console.error(error);
-        return next(error);
-    }
 });
 
 module.exports = router;

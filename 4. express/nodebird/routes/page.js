@@ -1,6 +1,6 @@
 const express = require('express');
 const {isLoggedIn, isNotLoggedIn} = require('./middlewares');
-const { Post, User } = require('../moduls');
+const { Post, User } = require('../models');
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.get('/', (req, res, next) => {
       model: User,
       attributes: ['id', 'nick'],
     },
-    order: [['createAt', 'DESC']],
+    order: [['createdAt', 'DESC']],
   }).then((post) => {
     res.render('main', {
       title: 'NodeBird',
