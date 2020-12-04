@@ -7,7 +7,7 @@ json 포맷을 이용하여 사용자에 대한 속성을 저장하는 claim(사
 [Header / Payload / Signature]
 Header : Signature 해싱을 위한 알고리즘 지정
 Payload : 토큰에서 사용할 정보, Claim이 담겨 있음
-Signature : 
+Signature : 유효성 검증을 위한 암호화 코드
 
 ## Claim
 1. Registered Claim : 토큰 표현을 위해 미리 정해진 종류의 데이터
