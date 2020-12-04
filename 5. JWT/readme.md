@@ -9,7 +9,7 @@ Header : Signature 해싱을 위한 알고리즘 지정
 Payload : 토큰에서 사용할 정보, Claim이 담겨 있음
 Signature : 
 
-### Claim
+## Claim
 1. Registered Claim : 토큰 표현을 위해 미리 정해진 종류의 데이터
 2. Public Claim : 사용자 정의, 공개용 정보를 위한 정보를 저장
 3. Private Claim : 사용자 정의, 임의로 지정한 정보를 저장
@@ -21,3 +21,8 @@ Signature :
 - Client에서 관리 한다.
 
 참고페이지 : https://mangkyu.tistory.com/56
+
+<br>
+
+## JWT FLOW
+![JWT](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbc2kWC%2FbtqxxKTe6gG%2F8RshG065c2b7fckkpnwtkk%2Fimg.png)
