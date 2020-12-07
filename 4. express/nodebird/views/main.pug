@@ -12,20 +12,24 @@ block content
                             input#img-url(type='hidden' name='url')
                         div
                             label#img-label(for='img') 사진 업로드
-                            input(type='text' name='hashtag' placeholder='태그 검색')
-                            botton.btn 검색
-                        for twit in twits
-                            .twit
-                                input.twit-user-id(type='hidden' value=twit.user.id)
-                                input.twit-id(type='hidden' value=twit.id)
-                                .twit-author=twit.user.nick
-                                -const follow = user && user.Following.map(f=>f.id).includes(twit.user.id);
-                                if user && user.id !== twit.user.id && !follow
-                                    button.twit-follow 팔로우하기
-                                .twit-content=twit.content
-                                if twit.img
-                                    .twit-img
-                                        img(src=twit.img alt='썸네일')
+                            input#img(type='file' accept='image/*')
+                            button#twit-btn(type='submit') 짹짹
+            .twits
+                form#hashtag-form(action='/post/hashtag')
+                    input(type='text' name='hashtag' placeholder='태그 검색')
+                    button.btn 검색
+                for twit in twits
+                    .twit
+                        input.twit-user-id(type='hidden' value=twit.user.id)
+                        input.twit-id(type='hidden' value=twit.id)
+                        .twit-author=twit.user.nick
+                        -const follow = user && user.Following.map(f=>f.id).includes(twit.user.id);
+                        if user && user.id !== twit.user.id && !follow
+                            button.twit-follow 팔로우하기
+                        .twit-content=twit.content
+                        if twit.img
+                            .twit-img
+                                img(src=twit.img alt='썸네일')
             script.
                 if(document.getElementById('img')) {
                     document.getElementById('img').addEventListener('change', function(e) {
