@@ -110,7 +110,7 @@ textarea {
   vertical-align: top;
 }
 
-@media screen and(min-width: 800px) {
+@media screen and (min-width: 800px) {
   .timeline {
     width: 500px;
   }
@@ -206,5 +206,5 @@ textarea {
 }
 
 footer {
-  text-aligh: center;
+  text-align: center;
 }

@@ -10,7 +10,7 @@ module.exports = (passport) => {
     // 요청시 실행, session 미들웨어가 호출
     passport.deserializeUser((id, done) => {
         User.findOne({
-            where:{id},
+            where:{ id },
             include: [{
                 model: User,
                 attributes: ['id', 'nick'],
