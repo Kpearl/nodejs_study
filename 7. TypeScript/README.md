@@ -8,6 +8,14 @@ npm i
 tsc --init
 ```
 
+### package.json 환경 설정
+```
+"script": {
+    "dev": "ts-node src",
+    "build": "tsc && node dist"
+}
+```
+
 ### tsconfig.json 환경 설정
 ```
 {
